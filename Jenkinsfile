@@ -4,7 +4,11 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                git 'https://github.com/nunidoron/ex8-pl.git'
+                sh 'python main.py'
+            }
+        }
+        stage('Bye') {
+            steps {
                 sh 'python main.py'
             }
         }
